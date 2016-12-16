@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
@@ -13,15 +14,16 @@
       <p>Heard it from the greats</p>
 </div>
   </div>
-  <div class="col-xs-4 slogan center">
+  <div class="col-xs-6 center slogan ">
     Getting you into the minds of the greats sinces 2016
   </div>
-  <div class="col-xs-5 center nav-links">
-    <h5><%= link_to 'Contribute', "#" %></h5>
+  <div class="col-xs-3 center nav-links">
+    <h5 class="right-divider"><%= link_to 'Contribute', "#" %></h5>
     <h5><%= link_to 'About', '#' %></h5>
   </div>
   <br class="clear"/>
 </header>
+<hr />
 <%= yield %>
 
 </body>

@@ -12,5 +12,11 @@
 }
 
 a {
-  color:$dark-grey;
+  color:rgb(51,51,51);
+  border-bottom:2px solid rgb(51,51,51);
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(51,51,51);
+  cursor:pointer;
 }
