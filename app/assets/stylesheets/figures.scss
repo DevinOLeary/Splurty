@@ -1,0 +1,24 @@
+//Circle logo art
+.circle {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    font-weight:bold;
+    font-style: italic;
+    position: relative;
+    border-radius: 100%;
+    background: #f84342;
+    border: 1px solid #F7F7F7;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    transform:rotate(11deg);
+    -ms-transform:rotate(11deg); /* IE 9 */
+    -webkit-transform:rotate(11deg); /* Opera, Chrome, and Safari */
+}

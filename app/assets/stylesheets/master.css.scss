@@ -1,2 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "figures";
+@import "text";
+@import "vars/colors";
+@import "vars/fonts";
+
+.clear {
+  clear: both;
+}
