@@ -10,15 +10,17 @@
 <body>
 <header>
   <div class="col-xs-3">
-    <div class="circle center">
-      <p>Heard it from the greats</p>
-</div>
+    <%= link_to root_path do %>
+      <div class="circle center">
+        <p>Heard it from the greats</p>
+      </div>
+    <% end %>
   </div>
   <div class="col-xs-6 center slogan ">
     Getting you into the minds of the greats sinces 2016
   </div>
   <div class="col-xs-3 center nav-links">
-    <h4 class="right-divider"><%= link_to 'Contribute', "#" %></h4>
+    <h4 class="right-divider"><%= link_to 'Contribute', new_quote_path %></h4>
     <h4><%= link_to 'About', '#' %></h4>
   </div>
   <br class="clear"/>
@@ -29,10 +31,10 @@
 </article>
 <footer class="footer">
   <div class="container">
-    <div class="col-xs-6 center">
+    <div class="col-xs-7 right">
       <%= link_to "Give me more!", "#", class: "more" %>
     </div>
-    <div class="col-xs-6 right">
+    <div class="col-xs-5 right">
       <p>Proudly build by <a href="devinoleary.getforge.io" target="_blank">Devin</a></p>
     </div>
   </div>

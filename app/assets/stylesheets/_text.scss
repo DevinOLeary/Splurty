@@ -1,4 +1,6 @@
-
+* {
+    font-family: 'Quicksand', sans-serif;
+}
 .slogan {
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-style: italic;
@@ -6,20 +8,15 @@
   font-size:1.5em;
 }
 .quote-container {
-  font-family: 'Quicksand', sans-serif;
+
   h2 {
     font-weight: bold;
   }
 }
 
-.circle {
-  font-family: 'Quicksand', sans-serif;
-}
-
 
 a {
   color: rgb(51,51,51);
-  font-family:'Quicksand', sans-serif;
   font-weight:bold;
 }
 a:hover {
