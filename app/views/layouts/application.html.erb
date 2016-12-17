@@ -24,7 +24,19 @@
   <br class="clear"/>
 </header>
 <hr />
-<%= yield %>
+<article class="container">
+  <%= yield %>
+</article>
+<footer class="footer">
+  <div class="container">
+    <div class="col-xs-6 center">
+      <%= link_to "Give me more!", "#", class: "more" %>
+    </div>
+    <div class="col-xs-6 right">
+      <p>Proudly build by <a href="devinoleary.getforge.io" target="_blank">Devin</a></p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
