@@ -46,6 +46,14 @@ hr {
 
 .about-content {
   margin-bottom: 2em;
+  margin-top: -2em;
+}
+.about-splurty {
+  margin: 1em;
+  p {
+    display:block;
+    width:50%;
+  }
 }
 
 
@@ -56,5 +64,11 @@ hr {
   }
   h1, h2 {
     font-size: 1.7em;
+  }
+  .about-splurty {
+    p {
+      display:block;
+      width:100%;
+    }
   }
 }
