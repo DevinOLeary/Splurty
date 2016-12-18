@@ -19,6 +19,15 @@ a {
   color: rgb(51,51,51);
   font-weight:bold;
 }
+a:focus {
+  outline:none;
+}
+
+a:visited {
+  color: rgb(51,51,51);
+  text-decoration:overline;
+}
+
 a:hover {
   color: rgb(51,51,51);
   border-bottom:2px solid rgb(51,51,51);
