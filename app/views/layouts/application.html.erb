@@ -16,12 +16,12 @@
       </div>
     <% end %>
   </div>
-  <div class="col-xs-6 center slogan ">
+  <div class="col-sm-5 hidden-xs center slogan ">
     Getting you into the minds of the greats sinces 2016
   </div>
-  <div class="col-xs-3 center nav-links">
+  <div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-3 center nav-links">
     <!--Button for Modal  -->
-    <h4><%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %> </h4>
+    <h4><%= link_to 'Contribute', '#', class: 'contribute', data: {toggle: 'modal', target: '#myModal'} %> </h4>
     <h4><%= link_to 'About', about_path %></h4>
   </div>
   <br class="clear"/>
@@ -37,8 +37,9 @@
     </div>
     <%= simple_form_for Quote.new do |f|%>
       <div class="modal-body">
-          <%= f.input :saying %>
-          <%= f.input :author %>
+          <%= f.input :saying, label: "What saying do you want to add?", placeholder:"" %>
+          <br/>
+          <%= f.input :author, label: "Who is the author?", placeholder: "" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -60,10 +61,10 @@
 </article>
 <footer class="footer">
   <div class="container">
-    <div class="col-xs-7 right">
+    <div class="col-xs-12 col-sm-6 footer-blurb">
       <%= link_to "Give me more!", root_path, class: "more" %>
     </div>
-    <div class="col-xs-5 right">
+    <div class="col-xs-12 col-sm-6 footer-blurb">
       <p>Proudly built by <a href="devinoleary.getforge.io" target="_blank">Devin</a></p>
     </div>
   </div>

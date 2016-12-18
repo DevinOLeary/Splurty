@@ -22,10 +22,9 @@ a {
 a:focus {
   outline:none;
 }
-
-a:visited {
+.contribute:visited {
   color: rgb(51,51,51);
-  text-decoration:overline;
+  text-decoration: none;
 }
 
 a:hover {
