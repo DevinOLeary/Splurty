@@ -1,15 +1,21 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Splurty</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+<head>
+  <title>Splurty</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
   <body>
     <div class="quote-container">
-      <!-- <h1><%= @quote.saying %></h1>
+      <h3>
+        <span>Splurty / No. <%= @quote.id %></span>
+        Here is the <u>Exact</u> quote you were looking for!!
+      </h3>
+      <h1><%= @quote.saying %></h1>
       <br/>
-      <h2>- <%= @quote.author %></h2> -->
+      <h2>- <%= @quote.author %></h2>
     </div>
   </body>
 </html>

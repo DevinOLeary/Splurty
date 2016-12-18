@@ -14,15 +14,19 @@
 
 .quote-container {
   height:30vh;
-  margin-top:5%;
+  margin-top:1%;
   h1 {
-    width:500px;
+    width:50%;
     margin:0 auto;
     text-align:center;
   }
   h2 {
     margin-left:60%;
     text-align: center;
+  }
+  h3 {
+    margin-bottom:2em;
+    color: #999999;
   }
 }
 hr {
@@ -34,8 +38,23 @@ hr {
   justify-content: center;
   align-items: center;
 }
-.right {
+.footer-blurb {
   display:flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.about-content {
+  margin-bottom: 2em;
+}
+
+
+// Media Queries
+@media screen and (max-width: 750px) {
+  .footer-blurb {
+    justify-content: center;
+  }
+  h1, h2 {
+    font-size: 99%;
+  }
 }

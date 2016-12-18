@@ -10,30 +10,62 @@
 <body>
 <header>
   <div class="col-xs-3">
-    <div class="circle center">
-      <p>Heard it from the greats</p>
-</div>
+    <%= link_to root_path do %>
+      <div class="circle center">
+        <p>Heard it from the greats</p>
+      </div>
+    <% end %>
   </div>
-  <div class="col-xs-6 center slogan ">
+  <div class="col-sm-5 hidden-xs center slogan ">
     Getting you into the minds of the greats sinces 2016
   </div>
-  <div class="col-xs-3 center nav-links">
-    <h4 class="right-divider"><%= link_to 'Contribute', "#" %></h4>
-    <h4><%= link_to 'About', '#' %></h4>
+  <div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-3 center nav-links">
+    <!--Button for Modal  -->
+    <h4><%= link_to 'Contribute', '#', class: 'contribute', data: {toggle: 'modal', target: '#myModal'} %> </h4>
+    <h4><%= link_to 'About', about_path %></h4>
   </div>
   <br class="clear"/>
 </header>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
+    </div>
+    <%= simple_form_for Quote.new do |f|%>
+      <div class="modal-body">
+          <%= f.input :saying, label: "What saying do you want to add?", placeholder:"" %>
+          <br/>
+          <%= f.input :author, label: "Who is the author?", placeholder: "" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit 'Add Quote', class: 'btn btn-danger' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
+
 <hr />
 <article class="container">
+  <% if flash[:error].present? %>
+    <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
+      <%= flash[:error].html_safe %>
+    </div>
+  <% end %>
   <%= yield %>
 </article>
 <footer class="footer">
   <div class="container">
-    <div class="col-xs-6 center">
-      <%= link_to "Give me more!", "#", class: "more" %>
+    <div class="col-xs-12 col-sm-6 footer-blurb">
+      <%= link_to "Give me more!", root_path, class: "more" %>
     </div>
-    <div class="col-xs-6 right">
-      <p>Proudly build by <a href="devinoleary.getforge.io" target="_blank">Devin</a></p>
+    <div class="col-xs-12 col-sm-6 footer-blurb">
+      <p>Proudly built by <a href="devinoleary.getforge.io" target="_blank">Devin</a></p>
     </div>
   </div>
 </footer>
